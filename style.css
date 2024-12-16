@@ -127,9 +127,9 @@ body {
   color: rgb(0, 0, 0);
   margin: 10px 20px;
   font-size: 15px;
-  text-transform: uppercase;
   font-family: sans-serif;
-  font-weight: 100;
-  letter-spacing: 2px;
-  text-align: center;
+  font-style: italic;
+  font-weight: 550;
+  letter-spacing: 1.5px;
+  text-align: justify;
 }

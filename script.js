@@ -21,10 +21,8 @@ function openEnvelope() {
 function letterUp() {
   const letter = document.getElementById("letter");
   const one = document.getElementById("one");
-  // const envelope = document.getElementById("envelope");
 
   one.style.zIndex = 1;
-  //envelop
   letter.style.zIndex = 2;
   let i = 0;
   let id = null;
@@ -55,7 +53,6 @@ function letterDown() {
 
   id = setInterval(() => {
     if (i == 100) {
-      // lastPos = -i;
       clearInterval(id);
     } else {
       letter.style.top = -500 + i * 5 + "px";
