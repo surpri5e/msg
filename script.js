@@ -3,11 +3,26 @@ setTimeout(() => {
     const card = document.getElementById("flip-card-inner");
     card.style.transform = "rotateY(180deg)";
   }, 500);
-}, 5000);
+}, 4000); //bilis ng pagflip ata
 
 setTimeout(() => {
-  setTimeout(openEnvelope, 1000);
+  setTimeout(openEnvelope, 800);
 }, 5000);
+
+document.addEventListener("DOMContentLoaded", function () {
+  const heartContainer = document.getElementById("heart-container");
+  for (let i = 0; i < 150; i++) {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.style.left = Math.random() * 150 + "vw";
+    heart.style.animationDelay = Math.random() * 3 + "s";
+    heartContainer.appendChild(heart);
+  }
+  setTimeout(() => {
+    heartContainer.style.display = "none";
+    document.getElementById("flip-card").style.display = "block";
+  }, 3000);
+});
 
 function openEnvelope() {
   setInterval(() => {
@@ -35,7 +50,7 @@ function letterUp() {
       letter.style.top = -i + "px";
       i++;
     }
-  }, 5);
+  }, 2); //pagtaas
 
   setTimeout(letterDown, 3000);
 }
@@ -62,7 +77,7 @@ function letterDown() {
 
       i++;
     }
-  }, 10);
+  }, 5); //pagbaba ng letter
 
   setTimeout(() => {
     const popUp = document.getElementById("popUp");
